@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrilearning — Issue 3: Can AI Help Farmers Make Better Decisions?</title>
+  <link rel="stylesheet" href="vendor/tailwind.css">
+  <link rel="stylesheet" href="assets/aos.css">
+  <link rel="stylesheet" href="styles.css">
+<style>[data-aos]{opacity:1 !important;transform:none !important;}.hero{min-height:822px !important;}</style>
+</head>
+
+<body data-aos-easing="ease-out-cubic" data-aos-duration="700" data-aos-delay="0">
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <header class="bg-[#12462d] border-b border-[rgba(223,211,191,0.2)] overflow-hidden">
+    <div class="mx-auto px-4 flex max-w-[100vw] items-center justify-between py-4 gap-y-4">
+      <div class="flex items-center gap-3 flex-1">
+        <img src="assets/top-left-bullet.svg" class="h-10 md:h-16 shrink-0" alt="">
+        <img src="assets/logo-light.svg" alt="Agrilearning" class="h-8 md:h-10">
+      </div>
+      <div class="flex items-center gap-4 md:gap-6 justify-end flex-1">
+        <img src="assets/ocpa-nutri.webp" alt="OCP Nutricrops" class="h-7 hidden md:block">
+        <img src="assets/ujala-logo.webp" alt="UJALA" class="h-6 hidden md:block">
+        <img src="assets/jpal-logo.webp" alt="J-PAL" class="h-8 hidden md:block">
+        <img src="assets/um6p-logo.webp" alt="UM6P" class="h-10 hidden md:block">
+        <img class="h-10 md:h-16 shrink-0 [transform:rotateY(180deg)]" src="assets/top-left-bullet.svg" alt="">
+      </div>
+    </div>
+    <div class="md:hidden px-4 pb-3">
+      <img src="assets/groupe-mobile.webp" class="w-full max-w-md mx-auto" alt="">
+    </div>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero">
+    <!-- decorative flat leaf (behind) + photo leaf (front), exact Figma vectors/photo -->
+    <img class="hero-flatleaf" src="assets/hero-flatleaf.svg" alt="" aria-hidden="true">
+    <svg class="hero-photoleaf" data-aos="fade-in" data-aos-delay="300" viewBox="0 0 690 691" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="heroLeaf"><path d="M202.594 202.388C67.536 337.309 0 514.154 0 691C176.453 690.564 352.77 623.11 487.406 488.612C622.464 353.678 690 176.846 690 0C513.547 0.436151 337.23 67.8897 202.594 202.388Z"/></clipPath></defs><image href="assets/hero-leaf.webp" x="0" y="0" width="690" height="691" preserveAspectRatio="xMidYMid slice" clip-path="url(#heroLeaf)"/></svg>
+    <img class="hero-arcs" src="assets/hero-arcs.svg" alt="" aria-hidden="true">
+
+    <div class="container hero-content">
+      <div data-aos="fade-down" class="hero-issue">
+        <span class="bar"></span><span class="txt">Issue 3</span>
+      </div>
+      <h1 data-aos="fade-up" data-aos-delay="100" class="hero-title">
+        Can AI help<br>farmers make<br>better decisions?
+      </h1>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 1 — INTRODUCTION ═══════════════ -->
+  <section>
+    <div class="container">
+      <div data-aos="fade-right" class="section-label">
+        <div class="icon"><img src="assets/leaf-bullet-point.svg" width="100" alt=""></div>
+        <span class="label-text">1 — Introduction</span>
+      </div>
+
+      <div class="grid-cols-1 md:grid-cols-2 grid gap-[100px] pb-12 items-start">
+        <div>
+          <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">
+            Artificial intelligence is rapidly entering agriculture, promising to solve one of the sector's biggest bottlenecks: getting the right advice to the right farmer at the right time.
+          </p>
+          <p data-aos="fade-up" data-aos-delay="100" class="text-base leading-[1.6] text-white/[.88] mb-4">
+            For many smallholder farmers, access to timely and reliable agricultural advice remains limited. Traditional extension systems often struggle to deliver personalized recommendations at scale: extension agents are overstretched, advice is often generalized rather than adapted to local conditions, and support rarely arrives exactly when farmers need to make decisions on fertilizer application, pest management, or planting.
+          </p>
+          <p data-aos="fade-up" data-aos-delay="200" class="text-base leading-[1.6] text-white/[.88]">
+            Over the past two decades, researchers have tested a range of digital tools to address these gaps.
+          </p>
+        </div>
+        <div data-aos="fade-left" class="relative">
+          <img src="assets/intro-field.webp" class="w-full rounded-[4px]" alt="">
+        </div>
+      </div>
+
+      <!-- Three approach sub-cards -->
+      <div class="pb-8">
+        <div data-aos="fade-up" class="sub-card">
+          <div class="sub-card-head">
+            <img src="assets/leaf-bullet-point.svg" class="sub-card-icon" alt="">
+            <h4>SMS reminders:<br>Impact and limitations</h4>
+          </div>
+          <p>One early approach relied on simple SMS reminders, delivering timely information directly to farmers' phones. In Kenya, reminders sent to sugarcane farmers about key farming tasks increased yields by 8 percent in the first season and generated an additional USD 45 per plot at a cost of only USD 0.30 per farmer (Casaburi et al., 2019). However, the system remained limited to standardized messages delivered at fixed times, with no ability for farmers to ask questions or receive advice tailored to their own situation.</p>
+        </div>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white mb-6 mt-6">Researchers then tested more interactive models.</p>
+
+        <div data-aos="fade-up" class="sub-card">
+          <div class="sub-card-head">
+            <img src="assets/leaf-bullet-point.svg" class="sub-card-icon" alt="">
+            <h4>Two-way hotlines:<br>High engagement, limited yield gains</h4>
+          </div>
+          <p>In India, a two-way agricultural hotline allowed cotton farmers to call experts, browse responses to other farmers' questions, and receive weekly agricultural tips. The service reached nearly 90 percent of farmers in intervention villages and increased the use of mobile-based information for agricultural decisions by 66 percentage points (Cole &amp; Fernando, 2020). Yet despite strong engagement, impacts on yields and profits remained limited and varied across seasons, suggesting that improving access to information alone may not always translate into better outcomes.</p>
+        </div>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white mb-6 mt-6">Other approaches focused on visual learning.</p>
+
+        <div data-aos="fade-up" class="sub-card">
+          <div class="sub-card-head">
+            <img src="assets/leaf-bullet-point.svg" class="sub-card-icon" alt="">
+            <h4>Farmer-led videos:<br>Gains that fade</h4>
+          </div>
+          <p>In Bihar, India, farmers attended village video screenings featuring local farmers demonstrating recommended rice cultivation practices. The videos were facilitated through community viewing sessions, allowing farmers to learn from peers facing similar conditions. Compared to conventional extension services, the intervention increased rice yields by 12-18 percent and profits by 9-24 percent (Baul et al., 2024). Still, adoption of the full recommended package remained incomplete and impacts faded over time.</p>
+        </div>
+      </div>
+
+      <div class="pb-16">
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">
+          Together, these studies suggest that digital tools can improve how agricultural information is delivered, but important limitations remain. SMS systems are static, hotlines are resource-intensive, and videos cannot respond to farmers' specific questions in real time. This raises an important question: can artificial intelligence overcome these limitations?
+        </p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">
+          Unlike previous digital advisory tools, AI assistants can respond instantly to farmer questions, process voice and text in local languages, and provide more personalized recommendations adapted to a farmer's crop, location, and needs. But can they provide reliable advice? Will farmers trust and use them? And most importantly, can they improve farming decisions and outcomes?
+        </p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">
+          This newsletter examines the emerging evidence on AI-powered agricultural advisory. We first review two recent studies testing AI chatbots in real-world settings, before turning to UJALA's newly funded pilot evaluation in Kenya, led by Ali Aouad, J-PAL invited researcher and Assistant Professor at MIT Sloan School of Management, which explores whether AI-powered advisory can improve farmer decision-making and coordination with agripreneurs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 2 — EVALUATIONS ═══════════════ -->
+  <section class="mt-[20px]">
+    <div class="container">
+      <div data-aos="fade-right" class="section-label">
+        <div class="icon"><img src="assets/leaf-bullet-point.svg" width="100" alt=""></div>
+        <span class="label-text">2 — Evaluations</span>
+      </div>
+
+      <!-- Evaluation 1 -->
+      <div class="grid-cols-1 md:grid-cols-2 grid gap-[100px] items-start mb-10">
+        <div>
+          <h2 data-aos="fade-up" class="text-[25px] font-bold text-[#8ac440] leading-[1.35] mb-6">
+            Evaluation 1: AI-Powered Agricultural Advisory at Scale (India/Kenya/Ethiopia/Nigeria)
+          </h2>
+          <h3 class="run-head">Context</h3>
+          <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">
+            In Kenya and across Sub-Saharan Africa and South Asia, smallholder farmers face a persistent gap in access to timely agricultural advice. Government extension services are severely understaffed. In Kenya, agent-to-farmer ratios reach 1:4,000, ten times worse than the recommended 1:400. When farmers encounter a sick animal, a crop disease outbreak, or an unfamiliar pest, they typically have no reliable person to call, and waiting days for an extension agent can mean losing an entire harvest.
+          </p>
+          <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">
+            To address this, researchers at Digital Green and Microsoft Research developed Farmer.Chat, a generative AI chatbot deployed on WhatsApp and Telegram. Drawing on a vetted knowledge base of agricultural documents, government guidelines, crop tables, and farming videos, the system generates personalized responses in real time across six languages, with voice input and output to accommodate low-literacy users (Singh et al., 2024).
+          </p>
+        </div>
+        <div data-aos="fade-left">
+          <img src="assets/eval1-photo.webp" class="w-full rounded-[4px]" alt="">
+        </div>
+      </div>
+
+      <div class="grid-cols-1 md:grid-cols-2 grid gap-[100px] items-start pb-10">
+        <div>
+          <h3 class="run-head">Evaluation Design</h3>
+          <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">
+            The study employed a mixed-methods evaluation combining large-scale analysis of platform usage logs with qualitative user research to assess usability, trust, engagement, and response quality.
+          </p>
+          <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">
+            The study focused primarily on Kenya, where Farmer.Chat launched in October 2023 across seven counties, serving 8,805 users. While farmers were the primary intended beneficiaries, the platform was also deployed to other actors involved in delivering agricultural advice and services. This allowed researchers to assess not only whether farmers would use and trust the tool, but also whether AI could strengthen the broader agricultural advisory ecosystem.
+          </p>
+          <ul class="text-base leading-[1.6] text-white/[.88] pl-[20px] list-disc">
+            <li class="mb-2"><strong class="text-[#8ac440]">Agricultural Extension Agents (AEAs):</strong> Government-employed field agents included because they interact directly with farmers and often face high information demands relative to their capacity.</li>
+            <li class="mb-2"><strong class="text-[#8ac440]">Lead Farmers:</strong> Community-level peer educators, each informally supporting 15–30 farmers and helping disseminate agricultural knowledge within their communities.</li>
+            <li class="mb-2"><strong class="text-[#8ac440]">Farmers:</strong> The primary intended beneficiaries of the platform, using the chatbot to access on-demand agricultural advice.</li>
+            <li><strong class="text-[#8ac440]">Agripreneurs:</strong> Young, commercially oriented service providers who advise farmers and facilitate access to agricultural technologies and inputs.</li>
+          </ul>
+        </div>
+
+        <!-- Eval 1 diagram (exact Figma export) -->
+        <div data-aos="fade-left">
+          <img src="assets/diagram-eval1.webp" class="diagram-img" alt="Farmer.Chat evaluation design: four user groups, two parallel evidence streams (quantitative and qualitative), and outcomes measured.">
+        </div>
+      </div>
+
+      <div class="pb-10">
+        <h3 class="run-head">Results</h3>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">Farmers used the platform regularly and across a wide range of agricultural topics. In Kenya alone, users submitted more than 225,000 queries, averaging 29 questions per farmer. While a relatively small group of highly engaged users generated most of the traffic, activity remained consistent throughout the pilot. Dairy and poultry were the most common topics, followed by coffee, potato, and avocado production. Usage also reflected seasonal needs, with questions on pests and diseases increasing during the main growing season.</p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">Overall, the platform was able to provide timely and reasonably accurate advice. Around three-quarters of all queries received a response, typically within nine seconds. Of these responses, about 80% were factually correct and two-thirds directly addressed the farmer's question. To improve the user experience, the team introduced suggested follow-up questions in February 2024, helping farmers continue conversations more easily. The feature was quickly adopted and accounted for nearly half of all interactions during peak periods.</p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">The quality of farmer questions improved with experience, although some barriers remained. More active users tended to ask clearer and more detailed questions than occasional users, and both groups became better at interacting with the system over time. While most responses were written in accessible language, some remained too complex for farmers with lower literacy levels.</p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">Trust ultimately emerged as the key factor driving continued use. Farmers often tested recommendations on their own plots before sharing them with others, suggesting a cautious but growing confidence in the platform. Users reported practical benefits such as reducing veterinary costs, improving pest management, and receiving advice much faster than through traditional channels. Women particularly appreciated the ability to access information privately and at any time of day, although they also faced greater obstacles to adoption, including lower smartphone ownership and higher relative data costs.</p>
+      </div>
+
+      <div class="pb-12">
+        <h3 class="run-head">Limitations</h3>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">The study is essentially a deployment and usability paper. It cannot answer whether Farmer.Chat actually improved yields, incomes, or any measurable agricultural outcome. There was no comparison group and no randomization. All evidence of impact comes from self-reported user interviews, which are prone to bias (social desirability bias and recall error). The heavy concentration of queries among a small share of users also raises questions about whether the platform is genuinely reaching the most marginalized farmers, or primarily the already-connected intermediaries like extension agents and lead farmers.</p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">Of the 25.2% of queries the platform failed to answer, 66.3% failed because the knowledge base lacked sufficient information. This means the system's usefulness remains substantially constrained by content coverage. Response quality metrics were validated internally rather than by independent assessors, and translation accuracy for local dialects remains a known weakness that the authors acknowledge but do not fully resolve.</p>
+      </div>
+
+      <!-- Evaluation 2 -->
+      <div class="grid-cols-1 md:grid-cols-2 grid gap-[100px] items-start mb-10">
+        <div>
+          <h2 data-aos="fade-up" class="text-[25px] font-bold text-[#8ac440] leading-[1.35] mb-6">
+            Evaluation 2: Can ChatGPT Provide Better Advice than Extension Agents? (Nigeria)
+          </h2>
+          <h3 class="run-head">Context</h3>
+          <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">
+            Traditional extension systems struggle to deliver timely, localized, and technically accurate recommendations, especially for complex decisions like fertilizer timing or seed selection. In Kano State, Nigeria, many rice farmers receive little to no extension support. Researchers asked whether an AI chatbot could fill this gap (Ibrahim et al., 2024).
+          </p>
+        </div>
+        <div data-aos="fade-left">
+          <img src="assets/eval2-photo.webp" class="w-full rounded-[4px]" alt="">
+        </div>
+      </div>
+
+      <div class="grid-cols-1 md:grid-cols-2 grid gap-[100px] items-start pb-10">
+        <div>
+          <h3 class="run-head">Evaluation Design</h3>
+          <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">
+            Researchers collected 32 real-world questions from 107 irrigated rice farmers in Kano State. They then compared answers from ChatGPT (August 2023 version) to answers from six agricultural extension agents. The researchers divided the six agents into two groups: three answered using only their own knowledge, and three had access to extension materials. Four local rice experts, blind to the responder's identity, rated each response for quality and local relevance on a 1-5 scale. The evaluators also stated which response they preferred for each question.
+          </p>
+        </div>
+
+        <!-- Eval 2 diagram (exact Figma export) -->
+        <div data-aos="fade-left">
+          <img src="assets/diagram-eval2.webp" class="diagram-img" alt="ChatGPT vs extension agents study flow: 107 rice farmers, 32 questions, three responder types (two extension-agent groups and ChatGPT), randomized answers, four expert evaluators, and statistical analysis.">
+        </div>
+      </div>
+
+      <div class="pb-16">
+        <h3 class="run-head">Results</h3>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">ChatGPT consistently outperformed extension agents when providing agronomic advice. On average, the chatbot received a score of 3.8 out of 5, compared to 3.2 for extension agents relying on their own knowledge and 3.3 for agents provided with extension materials. ChatGPT also received the highest possible rating ("very good") in 40 percent of cases, while extension agents achieved this rating in only 6–8 percent of cases. Overall, evaluators preferred the chatbot's response in 78 percent of comparisons, or 69 percent even when agents had access to extension manuals.</p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">One of ChatGPT's main strengths was its ability to provide detailed and comprehensive recommendations. While extension agents often gave very short responses, the chatbot typically explained the reasoning behind its recommendations and provided additional context that could help farmers better understand a problem. This additional detail was reflected in the evaluators' ratings and contributed to the chatbot's superior performance.</p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">However, the study also revealed important weaknesses when advice required local knowledge. Although ChatGPT performed well on general agronomic questions, it sometimes provided incorrect location-specific recommendations. For example, it suggested seed rates of 80–120 kg/ha instead of the locally recommended 35–40 kg/ha, recommended planting during November–December instead of the correct January–February period for the dry season. It also gave inaccurate recommendations regarding the number of seedlings per hill under different seasonal conditions.</p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">Interestingly, the extension agents themselves viewed the technology positively. After reviewing ChatGPT's responses, all six participating agents considered the chatbot's recommendations to be better than their own and indicated that they would be willing to use the tool in the future to support farmers. The findings therefore suggest that AI may have significant potential as a complement to extension services, helping agents deliver more consistent and technically robust advice while still relying on local expertise to adapt recommendations to farmers' specific conditions.</p>
+      </div>
+
+      <div class="grid-cols-1 md:grid-cols-2 grid gap-[100px] items-start pb-16">
+        <div data-aos="fade-right">
+          <img src="assets/advisory-photo-a.webp" class="w-full rounded-[4px]" alt="">
+        </div>
+        <div>
+          <h3 class="run-head">Limitations</h3>
+          <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">Several limitations suggest caution when interpreting these results. First, the study assessed the technical quality of responses rather than their usefulness to farmers. The evaluators were agricultural experts, not farmers, and may therefore have favored ChatGPT's detailed answers. In practice, farmers might prefer the shorter and more direct recommendations typically provided by extension agents. This difference was substantial, with ChatGPT responses averaging 335 words compared to just 10 words for extension agents.</p>
+          <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">Second, the study did not measure whether better advice actually translates into better outcomes. No farmers received or implemented the recommendations, meaning the researchers could not assess impacts on farming practices, yields, profits, or trust in the technology. Third, the findings are based on a very small sample: six extension agents, four evaluators, one crop, and one geographic region. It is therefore unclear whether the results would hold across different crops, countries, or agricultural systems.</p>
+          <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">Finally, the study highlighted an important limitation of current AI systems: their difficulty in adapting recommendations to local contexts. Because ChatGPT relied on information available up to September 2021, it sometimes missed recent recommendations and provided inaccurate site-specific advice. The authors therefore caution against direct use by farmers without expert oversight and argue that AI should currently be viewed as a tool to support extension agents rather than replace them. Moreover, because the study was not a randomized controlled trial, it cannot provide evidence that AI improves farmer welfare or agricultural productivity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 3 — ADVISORY SERVICES (KENYA) ═══════════════ -->
+  <section>
+    <div class="container">
+      <div data-aos="fade-right" class="section-label">
+        <div class="icon"><img src="assets/leaf-bullet-point.svg" width="100" alt=""></div>
+        <span class="label-text">3 — Agricultural Advisory Services (Kenya)</span>
+      </div>
+
+      <div class="grid-cols-1 md:grid-cols-2 grid gap-[100px] items-start mb-10">
+        <div>
+          <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">
+            The next frontier in agricultural extension may lie in combining AI-powered advisory tools with existing last-mile agricultural support systems. UJALA's newly funded pilot evaluation in Kenya, led by Ali Aouad (MIT), is the randomized study to test whether LLM-based advisory can shift farmer behavior and input use in a developing country context.
+          </p>
+        </div>
+        <div data-aos="fade-left">
+          <img src="assets/advisory-photo-b.webp" class="w-full rounded-[4px]" alt="">
+        </div>
+      </div>
+
+      <div class="pb-10">
+        <h3 class="run-head">The Intervention</h3>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">
+          The study provides farmers and agripreneurs with access to an AI-powered WhatsApp assistant. Farmers can submit agronomic questions via text or voice in English or Kiswahili, and receive tailored recommendations on crop management, input use, pest and disease diagnosis, and weather. Beyond individual advisory, the tool includes a coordination layer: farmers can notify their agripreneur directly when inquiring about inputs, and agripreneurs receive anonymized weekly summaries of their farmer pool's queries. This gives agripreneurs real-time visibility into farmer needs, allowing them to prioritize outreach, anticipate demand, and reduce input stockouts. The bundled design, targeting both farmer information access and agripreneur coordination capacity simultaneously, is what distinguishes this study from prior ICT interventions.
+        </p>
+      </div>
+
+      <div class="pb-10">
+        <h3 class="run-head">Study Design</h3>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">
+          The pilot follows a phased rollout approach designed to test the AI chatbot with agripreneurs before expanding access to farmers. This allows the research team to verify that the tool is being used, provides accurate advice, and functions as intended before introducing it to a larger population of end users.
+        </p>
+      </div>
+
+      <!-- Phased rollout diagram (exact Figma export) -->
+      <div data-aos="fade-up" class="mb-12">
+        <img src="assets/diagram-phases.webp" class="diagram-img diagram-wide" alt="Phased rollout: Phase 1 agripreneur pilot (20 treatment, 10 control; Phase 1 complete, gates cleared) and Phase 2 farmer rollout (treatment and control farmers; Phase 2 outcomes).">
+      </div>
+
+      <div class="pb-10">
+        <h3 class="sub-head">Phase 1: Agripreneur Pilot</h3>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">
+          Before extending the chatbot to farmers, researchers first needed to verify that the tool was being used, provided sufficiently accurate advice, and functioned as intended in real-world conditions. To do so, the first phase focuses on approximately 30 agripreneurs operating Farmer Service Centers across three Kenyan counties (Nakuru, Uasin Gishu, and Narok). Agripreneurs are randomly assigned either to a treatment group (20 agripreneurs) receiving access to the AI chatbot or to a control group (10 agripreneurs) continuing their usual advisory and input distribution activities without access to the tool. Treatment-group agripreneurs attend a training workshop on chatbot use and receive a mobile data allowance. To ensure that any observed differences are driven by the chatbot itself rather than training or internet access, control-group agripreneurs attend a workshop of the same duration covering general farming and business practices and receive the same mobile data allowance. This phase is designed to assess chatbot adoption and usability among agripreneurs while, most importantly, verifying the accuracy and safety of AI-generated advice before expanding access to farmers.
+        </p>
+      </div>
+
+      <div class="pb-10">
+        <h3 class="sub-head">Phase 2: Farmer Rollout</h3>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">
+          Once the chatbot has been validated with agripreneurs, the intervention expands to approximately 600 farmers connected to participating Farmer Service Centers (FSCs). Farmers in treatment areas receive direct access to the AI-powered WhatsApp chatbot on their own phones, allowing them to ask questions in English or Kiswahili and receive tailored recommendations on crop management, fertilizer use, weather, and pest control. Farmers in control areas continue to receive the standard services available through their local Farmer Service Center, including access to agripreneur advice and input-related support, but without access to the chatbot.
+        </p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">
+          In addition to providing advice, the intervention includes a coordination layer. Farmers can signal interest in purchasing inputs through the chatbot, while agripreneurs receive anonymized summaries of farmer questions and needs. This phase will assess not only whether farmers adopt and use the tool, but also whether AI-powered advisory services can strengthen information sharing and coordination between farmers and agripreneurs.
+        </p>
+      </div>
+
+      <div class="pb-10">
+        <h3 class="run-head">Where Things Stand</h3>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">Phase 1 of the pilot has now been completed, and the results suggest that agripreneurs are both willing and able to use the AI chatbot in their day-to-day work. Over a six-week period, the 21 treatment-group agripreneurs exchanged more than 1,000 messages with the tool, with a median of 40 messages per user. More importantly, engagement remained high over time: over 70% of agripreneurs were still actively using the chatbot one month after onboarding. Most questions focused on practical farming decisions, particularly weather, fertilizer use, crop protection, and planting.</p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">The pilot also provides encouraging evidence on advice quality. In an agronomic knowledge assessment developed by OCP Kenya agronomists, agripreneurs with access to the chatbot scored 6.5 percentage points higher than those in the control group. Among the most active users, the difference rose to nearly 12 percentage points. While the sample was too small to draw definitive conclusions, the results suggest that the chatbot can support agripreneurs without reducing the quality of the advice they provide.</p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">Perhaps most importantly, the chatbot passed the project's safety check. Three OCP Kenya agronomists reviewed 336 potentially sensitive conversations and agreed with the chatbot's recommendations in 95.5% of cases. The review identified two issues: one related to an agricultural chemical that had recently been banned in Kenya, and another related to overly confident recommendations based on weather forecasts. Both issues were corrected before the next phase of the pilot.</p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">With strong engagement, promising evidence on advice quality, and a high level of accuracy confirmed by agronomists, the research team considers the pilot ready to move to Phase 2. Preparatory work is already underway, with pre-baseline calls completed for 1,318 farmers who may soon gain access to the chatbot through participating agripreneurs.</p>
+      </div>
+
+      <div class="pb-16">
+        <h3 class="run-head">What Comes Next</h3>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88] mb-4">The next step is Phase 2 of the pilot, which will extend chatbot access directly to farmers linked to treatment-group agripreneurs. Following the successful completion of Phase 1, pre-baseline calls have already been completed with 1,318 farmers, and the research team is preparing for rollout. This phase will provide the first evidence on whether farmers adopt and regularly use the tool, what types of questions they ask, and whether AI-powered advice influences agricultural knowledge and decision-making.</p>
+        <p data-aos="fade-up" class="text-base leading-[1.6] text-white/[.88]">Beyond farmer adoption, Phase 2 will also help researchers assess several key questions needed before scaling the intervention: the extent of chatbot engagement, the accessibility of the tool across different farmer groups, potential spillovers between treatment and control participants, and the overall feasibility of implementing the program at a larger scale. These lessons will be used to refine the study design and inform a potential future randomized controlled trial across 12 Kenyan counties.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ WHAT THIS MEANS FOR OCP NUTRICROPS (cream) ═══════════════ -->
+  <section class="container">
+    <div data-aos="fade-up" class="container rounded-3xl p-4 md:p-10 bg-[#dfd3bf] text-[#12462d]">
+      <div class="flex items-start gap-5 mb-8">
+        <div class="icon2"><img src="assets/leaf-bullet-point.svg" width="70" alt=""></div>
+        <h3 class="text-[22px] md:text-[28px] font-bold text-[#12462d] leading-[1.3]">What this means for OCP Nutricrops</h3>
+      </div>
+      <p class="text-base leading-[1.7] text-[#12462d] mb-6">The evidence emerging from Kenya suggests several implications for the future of AI-powered advisory services in agriculture.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-[#12462d]">
+        <div>
+          <div class="takeaway-item">
+            <strong class="takeaway-title">1. AI may strengthen, rather than replace, last-mile advisory networks</strong>
+            <p class="mt-2 leading-[1.7] text-[15px]">Both the Nigeria study and the Kenya pilot suggest that AI performs best when combined with human expertise. While chatbots can provide rapid, consistent, and technically sound recommendations, local actors remain essential for adapting advice to specific contexts and building farmer trust. For OCP Nutricrops, this reinforces the potential value of integrating AI tools within existing advisory networks, such as Farmer Houses, Farmer Service Centers, and agripreneur programs, rather than viewing AI as a standalone extension solution.</p>
+          </div>
+          <div class="takeaway-item mt-6">
+            <strong class="takeaway-title">2. Digital advisory can increase the reach of agricultural support services</strong>
+            <p class="mt-2 leading-[1.7] text-[15px]">A major challenge facing extension systems is scale. Agripreneurs and extension agents often support hundreds of farmers, limiting the amount of individualized guidance they can provide. AI-powered advisory tools offer a potential way to provide farmers with on-demand support between field visits, while allowing agripreneurs to focus their time on more complex questions and farmer relationships. This could help extend the reach of existing advisory programs without proportionally increasing staffing requirements.</p>
+          </div>
+        </div>
+        <div>
+          <div class="takeaway-item">
+            <strong class="takeaway-title">3. AI-generated data may create new opportunities for farmer understanding</strong>
+            <p class="mt-2 leading-[1.7] text-[15px]">Unlike traditional extension systems, digital advisory platforms generate real-time information on farmer questions, concerns, and input needs. In the Kenya pilot, most interactions focused on weather, fertilizer use, crop protection, and planting decisions. At scale, such information could provide valuable insights into emerging farmer needs, seasonal challenges, and demand patterns, helping OCP and its partners adapt services, training, and product availability more effectively.</p>
+          </div>
+          <div class="takeaway-item mt-6">
+            <strong class="takeaway-title">4. Trust and local relevance remain critical for scaling</strong>
+            <p class="mt-2 leading-[1.7] text-[15px]">The evaluations also highlight that technical performance alone is not enough. Chatbots can still provide inaccurate recommendations when local adaptation is required, and sustained adoption depends on farmer confidence in the advice provided. This suggests that future digital agriculture strategies should place as much emphasis on validation, localization, and trust-building as on technological performance itself.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 pt-6" style="border-top:1px solid rgba(18,70,45,.2)">
+        <strong class="takeaway-title uppercase">Key takeaway</strong>
+        <p class="mt-2 leading-[1.7] text-[15px]">The emerging evidence suggests that AI may represent a promising new channel for delivering agricultural advice at scale. However, its greatest value may come not from replacing existing advisory systems, but from strengthening the connection between farmers, agripreneurs, and agricultural service providers while generating new insights into farmer needs and behavior.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ILFA / UJALA (cream) ═══════════════ -->
+  <section class="container">
+    <div data-aos="fade-in" class="h-px bg-[#8bc440ad] my-16"></div>
+    <div data-aos="fade-up" class="grid grid-cols-1 md:grid-cols-2 gap-12 rounded-3xl p-4 md:p-10 bg-[#dfd3bf] text-[#12462d]">
+      <div>
+        <div class="about-ujala">
+          <div class="icon2"><img src="assets/darkleaf-bullet-point.svg" width="70" alt=""></div>
+          <h3 class="text-[26px] font-bold text-[#12462d] mb-0">About ILFA</h3>
+        </div>
+        <p class="text-[15px] leading-[1.7] text-[#12462d]">The Impact, Learning and Farmer Adoption (ILFA) Service Line strengthens evidence-based decision-making across all OCP Nutricrops Business Units and Regions. It provides rigorous evaluation of Farmer-Centric Initiatives, translation of findings into practical knowledge and clear recommendations, and ongoing research to better understand farmer behavior, constraints, and incentives. Together, these efforts help ensure programs are designed, improved, and scaled based on credible evidence.</p>
+      </div>
+      <div>
+        <div class="about-ujala">
+          <div class="icon2"><img src="assets/darkleaf-bullet-point.svg" width="70" alt=""></div>
+          <h3 class="text-[26px] font-bold text-[#12462d] mb-0">About UJALA</h3>
+        </div>
+        <p class="text-[15px] leading-[1.7] text-[#12462d]">The UM6P-J-PAL Applied Lab for Agriculture (UJALA) is a research and innovation partnership led by J-PAL and OCP Nutricrops. UJALA works to generate rigorous evidence on how to improve input delivery, decision-making, and farmer outcomes. We collaborate with policymakers and program implementers to test scalable solutions and turn evidence into action.<br><br>
+          <strong>To learn more or explore collaboration opportunities, visit:</strong><br>
+          <a href="https://povertyactionlab.org/ujala" target="_blank" rel="noopener" class="font-bold text-[#8AC440] underline">povertyactionlab.org/ujala</a>
+        </p>
+      </div>
+    </div>
+    <div data-aos="fade-in" class="h-px bg-[#8bc440ad] mt-16"></div>
+  </section>
+
+  <!-- ═══════════════ WEBINAR ═══════════════ -->
+  <section>
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 mt-12">
+        <div data-aos="fade-right" class="section-label pt-0">
+          <div class="icon"><img src="assets/leaf-bullet-point.svg" width="100" alt=""></div>
+          <span class="label-text">Webinar</span>
+        </div>
+        <div>
+          <p data-aos="fade-up" class="text-base leading-[1.6] text-white/80 max-w-[740px]">
+            Agrilearning Dialogues is a webinar series launched by the Impact, Learning and Farmer Adoption Service Line to foster learning, dialogue, and collaboration around farmer-facing topics across OCP Nutricrops. Each webinar is linked to a newsletter issue about a specific farmer-facing topic. Through interactive discussions, the series creates a space to exchange perspectives and explore how evidence from evaluations and research can be translated into practice.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-12 mx-auto rounded-2xl overflow-hidden relative flex flex-col md:flex-row">
+      <!-- LEFT -->
+      <div data-aos="fade-right" class="w-full md:w-3/5 bg-[#e9dfcf] p-10 flex flex-col justify-between rounded-t-2xl md:rounded-tr-none md:rounded-l-2xl">
+        <div class="mb-6 flex items-center justify-between">
+          <img src="assets/logo-dark.svg" width="300" alt="Agrilearning">
+          <span class="text-5xl font-medium text-[#12462d]">#3</span>
+        </div>
+        <div class="space-y-12">
+          <p class="text-xl font-semibold text-[#8AC440] uppercase tracking-wide underline">Upcoming Webinar</p>
+          <div class="flex items-start gap-3">
+            <img src="assets/arrow.svg" width="30" class="pt-1" alt="">
+            <h2 class="text-2xl md:text-5xl font-bold text-green-900 uppercase leading-[1.1]">Can AI help Farmers Make Better Decisions</h2>
+          </div>
+          <div class="flex items-start gap-3 text-green-900">
+            <img src="assets/calendar.webp" width="30" class="pt-1" alt="">
+            <p class="text-sm md:text-lg font-semibold">30 June 2026<br>from 2 p.m to 3 p.m (GMT+1)</p>
+          </div>
+        </div>
+        <div></div>
+      </div>
+
+      <!-- RIGHT -->
+      <div data-aos="fade-left" data-aos-delay="100" class="w-full md:w-2/5 bg-[#8BC34A] p-10 relative rounded-b-2xl md:rounded-bl-none md:rounded-r-2xl">
+        <div class="mb-8">
+          <p class="text-sm font-bold text-green-900 uppercase tracking-wide border-b-2 border-green-900 inline-block pb-1">Speakers</p>
+        </div>
+        <div class="flex items-center gap-4 mb-8">
+          <img src="assets/speaker-1.webp" class="speaker-portrait shrink-0" alt="Ali Aouad">
+          <div>
+            <h3 class="text-lg md:text-2xl font-bold text-green-900 mb-1">Ali Aouad</h3>
+            <p class="text-sm md:text-base text-white/90">J-PAL invited researcher and Assistant Professor at MIT Sloan School of Management</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <img src="assets/speaker-2.webp" class="speaker-portrait shrink-0" alt="Vincent Sauton">
+          <div>
+            <h3 class="text-lg md:text-2xl font-bold text-green-900 mb-1">Vincent Sauton</h3>
+            <p class="text-sm md:text-base text-white/90">Science &amp; Agronomy Head, OCP Singapore</p>
+          </div>
+        </div>
+        <div class="absolute md:bottom-[8%] bottom-[4%] md:right-8 right-6 pointer-events-none">
+          <img src="assets/leaf-point.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="mt-[120px] container mx-auto relative">
+    <div class="container flex items-center justify-center md:justify-between flex-wrap gap-4">
+      <div class="flex items-center gap-8 relative">
+        <img src="assets/yellow-green-leaf.webp" class="absolute bottom-0 left-0 w-[250px] md:block hidden z-[-1]" alt="">
+        <img src="assets/logo-light.svg" alt="Agrilearning" class="md:h-7 h-5 opacity-80 mb-[30px]">
+        <img src="assets/ocpa-nutri.webp" alt="OCP Nutricrops" class="md:h-7 h-5 opacity-80 mb-[30px]">
+      </div>
+      <div class="relative">
+        <img src="assets/green-leaf.webp" class="absolute bottom-0 right-0 w-[250px] z-[-1]" alt="">
+        <p class="text-xs text-white/50 mb-[30px] text-center md:text-right">2026 © Agrilearning. Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="vendor/aos.js"></script>
+  <script></script>
+</body>
+</html>
