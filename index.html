@@ -309,7 +309,7 @@
 
   <!-- ═══════════════ WHAT THIS MEANS FOR OCP NUTRICROPS (cream) ═══════════════ -->
   <section class="container" data-aos="fade-up">
-    <div class="container rounded-3xl p-4 md:p-10 bg-[#dfd3bf] text-[#12462d]">
+    <div class="rounded-3xl p-4 md:p-10 bg-[#dfd3bf] text-[#12462d]">
       <div class="flex items-start gap-5 mb-8">
         <div class="icon2"><img src="assets/leaf-bullet-point.svg" width="70" alt=""></div>
         <h3 class="text-[22px] md:text-[28px] font-bold text-[#12462d] leading-[1.3]">What this means for OCP Nutricrops</h3>
@@ -345,7 +345,7 @@
   </section>
 
   <!-- ═══════════════ ABOUT ILFA / UJALA (cream) ═══════════════ -->
-  <section class="container mt-14" data-aos="fade-up">
+  <section class="container mt-[141px]" data-aos="fade-up">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 rounded-3xl p-4 md:p-10 bg-[#dfd3bf] text-[#12462d]">
       <div>
         <div class="about-ujala">
@@ -387,8 +387,8 @@
       <!-- LEFT -->
       <div class="w-full md:w-3/5 bg-[#e9dfcf] p-10 flex flex-col justify-between rounded-t-2xl md:rounded-tr-none md:rounded-l-2xl">
         <div class="mb-6 flex items-center justify-between">
-          <img src="assets/logo-dark.svg" width="300" alt="Agrilearning">
-          <span class="text-5xl font-medium text-[#12462d]">#3</span>
+          <img src="assets/logo-dark.svg" width="300" class="min-w-0" alt="Agrilearning">
+          <span class="text-5xl font-medium text-[#12462d] shrink-0">#3</span>
         </div>
         <div class="space-y-12">
           <p class="text-xl font-semibold text-[#8AC440] uppercase tracking-wide underline">Upcoming Webinar</p>
@@ -431,14 +431,17 @@
 
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer class="site-footer" data-aos="fade-up">
-    <img class="footer-leaf-l" src="assets/footer-leaf-l.svg" alt="" aria-hidden="true">
-    <img class="footer-leaf-r" src="assets/footer-leaf-r.svg" alt="" aria-hidden="true">
     <div class="container footer-inner flex items-center justify-center md:justify-between flex-wrap gap-6">
-      <div class="flex items-center gap-8">
+      <img class="footer-leaf-l" src="assets/footer-leaf-l.svg" alt="" aria-hidden="true">
+      <img class="footer-leaf-r" src="assets/footer-leaf-r.svg" alt="" aria-hidden="true">
+      
+      <div class="flex items-center gap-8 relative z-10">
         <img src="assets/logo-light.svg" alt="Agrilearning" class="md:h-7 h-5 opacity-80">
         <img src="assets/ocpa-nutri.webp" alt="OCP Nutricrops" class="md:h-7 h-5 opacity-80">
       </div>
-      <p class="text-xs text-white/50 text-center md:text-right">2026 © Agrilearning. Tous droits réservés</p>
+      
+      <!-- Added 'relative' and 'z-10' here -->
+      <p style="position: relative; z-index: 99; right: 60px;" class="text-xs text-white/50 text-center md:text-right">2026 © Agrilearning. Tous droits réservés</p>
     </div>
   </footer>
 

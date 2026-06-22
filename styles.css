@@ -26,6 +26,9 @@
 
 p, a, li, span { font-family: 'Gotham', sans-serif; }
 h1, h2, h3, h4, h5, h6, strong, span.label-text { font-family: 'GothamBold', 'Gotham', sans-serif; }
+/* Headings can carry long unbroken tokens (e.g. "(India/Kenya/Ethiopia/Nigeria)")
+   that have no normal wrap point and overflow narrow columns on mobile. */
+h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 
 /* --- TOKENS ------------------------------------------------ */
 :root {
@@ -45,6 +48,39 @@ body, html {
   max-width: 1222px;
   margin: 0 auto;
   padding: 0 40px;
+}
+/* Figma content is flush with the container's 1222px bound at desktop
+   (verified against section-label icons, footer logo/text edges) — the
+   40px padding is only needed below that width to keep edge breathing
+   room on narrower viewports. */
+@media (min-width: 1222px) {
+  .container { padding: 0; }
+}
+
+/* --- Tailwind utility shims -----------------------------------
+   vendor/tailwind.css is a static snapshot of classes used by the
+   OLD reference page only — any class below was never generated
+   there, so it silently no-ops without these rules. */
+.border-\[rgba\(223\,211\,191\,0\.2\)\] { border-color: rgba(223, 211, 191, 0.2); }
+.gap-6 { gap: 1.5rem; }
+.leading-\[1\.1\] { line-height: 1.1; }
+.leading-\[1\.7\] { line-height: 1.7; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-\[20px\] { margin-top: 20px; }
+.mt-\[141px\] { margin-top: 141px; }
+.pb-8 { padding-bottom: 2rem; }
+.pb-10 { padding-bottom: 2.5rem; }
+.pb-12 { padding-bottom: 3rem; }
+.pl-\[20px\] { padding-left: 20px; }
+.pt-6 { padding-top: 1.5rem; }
+.space-y-12 > * + * { margin-top: 3rem; }
+.text-\[15px\] { font-size: 15px; }
+.text-\[25px\] { font-size: 25px; }
+.min-w-0 { min-width: 0; }
+@media (min-width: 768px) {
+  .md\:text-base { font-size: 1rem; line-height: 1.5rem; }
+  .md\:text-right { text-align: right; }
 }
 
 /* --- HERO (1:1 with Figma at desktop, scales on small screens) --- */
@@ -119,17 +155,21 @@ body, html {
 
 /* --- Webinar speaker portraits ----------------------------- */
 .speaker { display: flex; align-items: center; gap: 18px; margin-bottom: 28px; }
-.speaker-portrait { width: 96px; height: 96px; border-radius: 9999px; object-fit: cover; flex-shrink: 0; border: 5px solid var(--green-dark); }
-@media (min-width: 768px) { .speaker-portrait { margin-left: -78px; } }  /* straddle the cream/green divide */
+.speaker-portrait { width: 138px; height: 138px; border-radius: 9999px; object-fit: cover; flex-shrink: 0; border: 5px solid var(--green-dark); }
+@media (min-width: 768px) { .speaker-portrait { margin-left: -109px; } }  /* straddle the cream/green divide (Figma: portrait centered on the panel boundary) */
 .speaker-info { flex: 1; }
 .speaker-name { margin-bottom: 4px; }
-.speaker-leaf { width: 26px; height: auto; flex-shrink: 0; align-self: center; }
+.speaker-leaf { width: 37px; height: auto; flex-shrink: 0; align-self: center; margin-right: 10px; }
 
-/* --- Footer decorative leaves (peek from page bottom) ------ */
-.site-footer { position: relative; margin-top: 120px; padding-bottom: 44px; overflow: hidden; min-height: 200px; display: flex; align-items: flex-end; }
-.footer-leaf-l { position: absolute; left: -8px; bottom: -70px; width: 190px; z-index: 0; pointer-events: none; }
-.footer-leaf-r { position: absolute; right: -16px; bottom: -120px; width: 300px; z-index: 0; pointer-events: none; }
+/* --- Footer decorative leaves (peek from page bottom) -------
+   Leaves are full, un-clipped vector shapes positioned to poke up
+   above the logo row and bleed past the page's bottom edge, exactly
+   as in Figma (frame clips them there). padding-top/bottom on
+   .site-footer reproduce that frame clip via overflow:hidden. */
+.site-footer { position: relative; padding-top: 134px; padding-bottom: 54px; overflow: hidden; }
 .footer-inner { position: relative; z-index: 1; width: 100%; }
+.footer-leaf-l { position: absolute; left: -56px; top: -100px; width: 281px; z-index: 0; pointer-events: none; }
+.footer-leaf-r { position: absolute; right: -43px; top: -134px; width: 439px; z-index: 0; pointer-events: none; }
 
 /* --- Framed photo (rounded + border + corner accent + wheat) --- */
 .photo { position: relative; width: 100%; }
